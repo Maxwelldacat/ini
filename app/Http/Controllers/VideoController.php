@@ -18,12 +18,12 @@ class VideoController extends Controller
     {
         $videos = Video::latest()->get();
         $orders = Order::latest()->get();
-        return view('admin.index', compact('videos', 'orders'));
+        return view('admin.videos.index', compact('videos'));
     }
 
     public function create()
     {
-        return view('admin.create');
+        return view('admin.videos.create');
     }
 
     public function store(Request $request)

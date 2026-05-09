@@ -11,7 +11,15 @@ class Order extends Model
         'email',
         'no_hp',
         'jenis_jasa',
+        'paket',
         'tanggal_pemesanan',
-        'catatan'
+        'catatan',
+        'drone',
+        'fast_edit',
+        'total_harga',
+        'bukti_transfer',
+        'status'
     ];
 }
+
+

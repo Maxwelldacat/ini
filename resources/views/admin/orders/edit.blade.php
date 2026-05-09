@@ -1,5 +1,12 @@
+@extends('admin.layouts.app')
+
+@section('content')
+
 <div class="container mx-auto p-6">
     <h1 class="text-3xl font-bold mb-6">Edit Pemesanan</h1>
+    <a href="/admin/orders" class="bg-gray-500 text-white px-4 py-2 rounded mb-4 inline-block">
+        ← Kembali
+    </a>
 
     <form action="/admin/orders/{{ $order->id }}" method="POST" class="max-w-lg">
         @csrf @method('PUT')
@@ -37,3 +44,5 @@
         <button type="submit" class="bg-green-500 text-white px-6 py-2 rounded">Update</button>
     </form>
 </div>
+
+@endsection

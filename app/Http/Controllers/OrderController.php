@@ -27,12 +27,58 @@ class OrderController extends Controller
             'nama_client' => 'required',
             'email' => 'required|email',
             'no_hp' => 'required',
-            'jenis_jasa' => 'required',
+            'jenis_jasa' => 'required|in:event,wisata',
+            'paket' => 'required',
             'tanggal_pemesanan' => 'required|date'
         ]);
 
-        Order::create($request->all());
-        return redirect('/')->with('success', 'Pemesanan berhasil!');
+        $harga = 0;
+
+        switch ($request->paket) {
+            case '1_day':
+                $harga = 500000;
+                break;
+            case '2_day':
+                $harga = 800000;
+                break;
+            case '3_day':
+                $harga = 1300000;
+                break;
+            case 'bali':
+                $harga = 1550000;
+                break;
+        }
+
+        if ($request->drone) {
+            $harga += 250000;
+        }
+
+        if ($request->fast_edit) {
+            $harga += 150000;
+        }
+
+        $order = Order::create([
+            'nama_client' => $request->nama_client,
+            'email' => $request->email,
+            'no_hp' => $request->no_hp,
+            'jenis_jasa' => $request->jenis_jasa,
+            'paket' => $request->paket,
+            'tanggal_pemesanan' => $request->tanggal_pemesanan,
+            'catatan' => $request->catatan,
+
+            'drone' => $request->drone ? 1 : 0,
+            'fast_edit' => $request->fast_edit ? 1 : 0,
+            'total_harga' => $harga
+        ]);
+        
+        return redirect('/orders/sukses/' . $order->id);
+    }
+
+
+    public function sukses($id)
+    {
+        $order = Order::findOrFail($id);
+        return view('orders.sukses', compact('order'));
     }
 
     // FORM EDIT (ADMIN)
@@ -65,6 +111,29 @@ class OrderController extends Controller
         return view('admin.orders.order-detail', compact('order'));
     }
 
+    public function uploadForm($id)
+    {
+        $order = Order::findOrFail($id);
+        return view('orders.upload', compact('order'));
+    }
 
+    public function uploadBukti(Request $request, $id)
+    {
+        $request->validate([
+            'bukti' => 'required|image|mimes:jpg,jpeg,png|max:2048'
+        ]);
+
+        $order = Order::findOrFail($id);
+
+        $file = $request->file('bukti');
+        $path = $file->store('bukti', 'public');
+
+        $order->update([
+            'bukti_transfer' => $path,
+            'status' => 'menunggu'
+        ]);
+
+        return redirect('/')->with('success', 'Bukti berhasil diupload!');
+    }
 
 }

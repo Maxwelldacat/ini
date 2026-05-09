@@ -1,27 +1,46 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="min-h-screen bg-gray-900 text-white px-6 py-10">
 
-<div class="grid md:grid-cols-3 gap-6 mt-6">
-    <a href="/pemesanan" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow">
-        pesan jasa
-    </a>
-@foreach($videos as $video)
-<div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-
-    <a href="{{ $video->video_url }}" target="_blank">
-        <img src="{{ $video->thumbnail }}" class="w-full h-48 object-cover hover:scale-105 transition">
+    <a href="/" class="text-blue-400 hover:underline mb-6 inline-block">
+        ← Kembali
     </a>
 
-    <div class="p-4">
-        <h2 class="font-bold text-lg text-gray-800">{{ $video->title }}</h2>
-        <p class="text-sm text-gray-500">{{ $video->description }}</p>
+    <h1 class="text-3xl font-bold text-center mb-10 text-blue-400">
+        Portofolio Kami
+    </h1>
+
+    <div class="flex justify-center mb-10 ">
+
+        <blockquote 
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DRg9pYVk4cP/"
+            data-instgrm-version="14">
+        </blockquote>
+
+    </div>
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    <div class="text-center max-w-2xl mx-auto mb-10">
+        <p class="text-gray-300">
+            Berikut adalah salah satu hasil karya terbaik kami. 
+            <!--Kami telah menangani berbagai proyek videografi seperti wedding, event, dan promosi bisnis.-->
+        </p>
     </div>
 
+    <div class="flex justify-center gap-4">
+        <a href="/pemesanan"
+           class="bg-blue-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition">
+            Pesan Jasa
+        </a>
 
+        <a href="https://youtube.com/CHANNEL_CONTOH" target="_blank"
+           class="bg-gray-700 px-6 py-3 rounded-lg hover:bg-gray-600 transition">
+            Lihat Semua Portofolio
+        </a>
 
-</div>
-@endforeach
+    </div>
 
 </div>
 

@@ -1,8 +1,11 @@
+
+
 <?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\AdminController;
 
 
 Route::get('/', function () {
@@ -26,6 +29,7 @@ Route::prefix('admin')->group(function () {
     Route::delete('/orders/{id}', [OrderController::class, 'destroy']);
 });
 
+
 // USER - FORM PEMESANAN
 Route::get('/pemesanan', [OrderController::class, 'create']);
 Route::post('/pemesanan', [OrderController::class, 'store']);
@@ -36,9 +40,34 @@ Route::get('/admin/orders/{id}/edit', [OrderController::class, 'edit']);
 Route::put('/admin/orders/{id}', [OrderController::class, 'update']);
 Route::delete('/admin/orders/{id}', [OrderController::class, 'destroy']);
 
-Route::get('/orders/{id}', [VideoController::class, 'showOrder']);
+Route::get('/orders/{id}/video', [VideoController::class, 'showOrder']);
 
 Route::get('/orders/{id}', [OrderController::class, 'show']);
 
 
 
+Route::get('/admin/login', function () {
+    return view('admin.login');
+});
+
+Route::post('/admin/login', [AdminController::class, 'login']);
+
+Route::get('/admin', [AdminController::class, 'index']);
+
+Route::post('/admin/logout', [AdminController::class, 'logout']);
+
+Route::get('/orders/sukses/{id}', [OrderController::class, 'sukses']);
+
+
+Route::get('/orders/{id}/upload', [OrderController::class, 'uploadForm']);
+Route::post('/orders/{id}/upload', [OrderController::class, 'uploadBukti']);
+
+
+// DETAIL JASA
+Route::get('/services/event', function () {
+    return view('services.event');
+});
+
+Route::get('/services/wisata', function () {
+    return view('services.wisata');
+});
