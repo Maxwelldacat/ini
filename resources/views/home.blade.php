@@ -24,7 +24,7 @@
             Abadikan momen terbaikmu dengan kualitas sinematik
         </p>
 
-        <a href="/videos" class="bg-[#196D7D] hover:bg-gray-500 text-white px-6 py-3 rounded-lg shadow ">
+        <a href="/portofolio" class="bg-[#196D7D] hover:bg-gray-500 text-white px-6 py-3 rounded-lg shadow ">
             Lihat Portfolio
         </a>
     </div>

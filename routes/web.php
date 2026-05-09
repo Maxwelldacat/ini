@@ -13,8 +13,9 @@ Route::get('/', function () {
 });
 
 
+
 // USER
-Route::get('/videos', [VideoController::class, 'index']);
+Route::get('/portofolio', [VideoController::class, 'index']);
 
 // ADMIN
 Route::prefix('admin')->group(function () {

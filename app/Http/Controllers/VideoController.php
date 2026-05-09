@@ -11,7 +11,7 @@ class VideoController extends Controller
     public function index()
     {
         $videos = Video::latest()->get();
-        return view('videos.index', compact('videos'));
+        return view('portofolio.index', compact('videos'));
     }
 
     public function adminIndex()
@@ -41,7 +41,7 @@ class VideoController extends Controller
     public function update(Request $request, Video $video)
     {
         $video->update($request->all());
-        return redirect()->route('videos.index');
+        return redirect()->route('portofolio.index');
     }
 
     public function destroy($id)

@@ -24,7 +24,7 @@
             <ul class="space-y-3">
                 <li><a href="/admin">Dashboard</a></li>
                 <li><a href="/admin/orders">Kelola Pesanan</a></li>
-                <li><a href="/admin/videos">Kelola Video</a></li>
+                <li><a href="/admin/videos">Kelola Portofolio</a></li>
                 
                 <form action="/admin/logout" method="POST">
                     @csrf
