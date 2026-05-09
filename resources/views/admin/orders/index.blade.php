@@ -23,7 +23,7 @@
                     <th class="border px-6 py-4 text-left">Drone</th>
                     <th class="border px-6 py-4 text-left">Fast edit</th>
                     <th class="border px-6 py-4 text-left">Total harga</th>
-                    <th class="border px-6 py-4 text-left">Tanggal</th>
+                    <th class="border px-6 py-4 text-left">Tanggal Acara</th>
                     <th class="border px-6 py-4 text-left">catatan</th>
                     <th class="border px-6 py-4 text-left">Bukti</th>
                     <th class="border px-6 py-4 text-left">Update Status</th>
@@ -42,7 +42,7 @@
                     <td class="border px-6 py-5 align-top">{{ $order->drone ? 'Ya' : 'Tidak' }}</td>
                     <td class="border px-6 py-5 align-top">{{ $order->fast_edit ? 'Ya' : 'Tidak' }}</td>
                     <td class="border px-6 py-5 align-top"> Rp {{ number_format($order->total_harga) }}</td>
-                    <td class="border px-6 py-5 align-top">{{ $order->tanggal_pemesanan }}</td>
+                    <td class="border px-6 py-5 align-top">{{ $order->tanggal_acara }}</td>
                     <td class="border px-6 py-5 align-top">{{ $order->catatan }}</td>
                     <td class="border px-6 py-5 align-top">
                         @if($order->bukti_transfer)

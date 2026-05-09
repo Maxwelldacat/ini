@@ -68,8 +68,8 @@
 
 
             <div class="mb-4">
-                <label class="block font-bold mb-2">Tanggal Pemesanan</label>
-                <input type="date" name="tanggal_pemesanan" class="w-full border p-2" required>
+                <label class="block font-bold mb-2">Tanggal Acara</label>
+                <input type="date" name="tanggal_acara" class="w-full border p-2" min="{{ date('Y-m-d') }}" required>
             </div>
 
             <div class="mb-4">

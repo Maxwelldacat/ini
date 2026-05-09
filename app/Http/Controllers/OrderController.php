@@ -29,7 +29,7 @@ class OrderController extends Controller
             'no_hp' => 'required',
             'jenis_jasa' => 'required|in:event,wisata',
             'paket' => 'required',
-            'tanggal_pemesanan' => 'required|date'
+            'tanggal_acara' => 'required|date'
         ]);
 
         $harga = 0;
@@ -63,7 +63,7 @@ class OrderController extends Controller
             'no_hp' => $request->no_hp,
             'jenis_jasa' => $request->jenis_jasa,
             'paket' => $request->paket,
-            'tanggal_pemesanan' => $request->tanggal_pemesanan,
+            'tanggal_acara' => $request->tanggal_pemesanan,
             'catatan' => $request->catatan,
 
             'drone' => $request->drone ? 1 : 0,

@@ -33,7 +33,7 @@
 
         <div class="mb-4">
             <label class="block font-bold mb-2">Tanggal</label>
-            <input type="date" name="tanggal_pemesanan" value="{{ $order->tanggal_pemesanan }}" class="w-full border p-2">
+            <input type="date" name="tanggal_acara" value="{{ $order->tanggal_acara }}" class="w-full border p-2">
         </div>
 
         <div class="mb-4">

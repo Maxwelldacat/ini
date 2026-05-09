@@ -12,7 +12,7 @@ class Order extends Model
         'no_hp',
         'jenis_jasa',
         'paket',
-        'tanggal_pemesanan',
+        'tanggal_acara',
         'catatan',
         'drone',
         'fast_edit',
