@@ -57,6 +57,19 @@ class OrderController extends Controller
             $harga += 150000;
         }
 
+
+        if ($request->paket == 'event_basic') {
+            $harga = 250000;
+        }
+
+        elseif ($request->paket == 'event_standart') {
+            $harga = 500000;
+        }
+
+        elseif ($request->paket == 'event_premium') {
+            $harga = 650000;
+        }
+
         $order = Order::create([
             'nama_client' => $request->nama_client,
             'email' => $request->email,
@@ -120,13 +133,13 @@ class OrderController extends Controller
     public function uploadBukti(Request $request, $id)
     {
         $request->validate([
-            'bukti' => 'required|image|mimes:jpg,jpeg,png|max:2048'
+            'bukti_transfer' => 'required|image|mimes:jpg,jpeg,png|max:2048'
         ]);
 
         $order = Order::findOrFail($id);
 
-        $file = $request->file('bukti');
-        $path = $file->store('bukti', 'public');
+        $file = $request->file('bukti_transfer');
+        $path = $file->store('bukti_transfer', 'public');
 
         $order->update([
             'bukti_transfer' => $path,

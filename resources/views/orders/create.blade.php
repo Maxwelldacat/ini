@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="min-h-screen flex items-center justify-center bg-gray-200 text-black">
+<div class="min-h-screen flex items-center justify-center bg-[#F5F7FA] text-black">
     <div class="bg-gray-200 p-8 rounded-xl shadow-lg w-full max-w-xl">
         <h1 class="text-3xl font-bold mb-6">Form Pemesanan</h1>
 
@@ -77,7 +77,7 @@
                 <textarea name="catatan" class="w-full border p-2"></textarea>
             </div>
 
-            <button type="submit" onclick="this.disabled=true; this.form.submit();" class="bg-[#196D7D] text-white px-6 py-2 rounded">
+            <button type="submit" onclick="this.disabled=true; this.form.submit();" class="bg-[#196D7D] text-white px-6 py-2 rounded hover:bg-[#145866]">
                 Pesan Sekarang
             </button>
         </form>
@@ -115,11 +115,11 @@
                     </option>
 
                     <option value="event_standart">
-                        Event Pro - 500K
+                        Event Standart - 500K
                     </option>
 
                     <option value="event_premium">
-                        Event Drone - 650K
+                        Event Premium - 650K
                     </option>
                 `;
 

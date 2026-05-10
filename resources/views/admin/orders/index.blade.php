@@ -2,7 +2,7 @@
 
 @section('title')
 
-    <h2 class="text-xl font-bold bg-gray-800 text-white p-6 rounded-xl ">📦 Kelola Pesanan</h2>
+    <h2 class="text-xl font-bold bg-[#196D7D] text-white p-6 rounded-xl ">📦 Kelola Pesanan</h2>
 
 @endsection
 

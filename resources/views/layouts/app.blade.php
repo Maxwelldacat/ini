@@ -7,7 +7,7 @@
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen" >
 
-<nav class="sticky top-0 z-50 bg-gradient-to-r bg-[#0B1320] text-white shadow">
+<nav class="sticky top-0 z-50 bg-gradient-to-r bg-[#196D7D] text-white shadow">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
         <img src="/images/logo1.png" alt="logo" class="w-10 h-15">

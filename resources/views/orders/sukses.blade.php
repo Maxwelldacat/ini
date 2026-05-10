@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon1.png">
+    
     <title>Pemesanan Berhasil</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#06152d] min-h-screen flex items-center justify-center p-6">
+<body class="bg-[#196D7D] min-h-screen flex items-center justify-center p-6">
 
     <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl p-8">
 
@@ -29,13 +31,13 @@
         </div>
 
         {{-- TOTAL --}}
-        <div class="bg-blue-50 rounded-2xl p-6 mt-8 text-center border border-blue-100">
+        <div class="bg-[#E6F4F5] rounded-2xl p-6 mt-8 text-center border border-blue-100">
 
             <p class="text-gray-500 text-lg">
                 Total Pembayaran
             </p>
 
-            <h2 class="text-5xl font-bold text-blue-600 mt-2">
+            <h2 class="text-5xl font-bold text-[#196D7D] mt-2">
                 Rp {{ number_format($order->total_harga, 0, ',', '.') }}
             </h2>
 
@@ -137,7 +139,7 @@
 
                     <a
                         href="/"
-                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition"
+                        class="bg-[#196D7D] hover:bg-[#57A0B2]  text-white px-6 py-3 rounded-xl font-semibold transition"
                     >
                         Kembali ke Home
                     </a>

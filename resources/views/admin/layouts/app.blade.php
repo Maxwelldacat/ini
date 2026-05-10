@@ -8,13 +8,13 @@
 </head>
 <body class="bg-gray-100">
 
-    <button id="toggleBtn" class="fixed top-4 left-4 z-50 bg-gray-800 text-white px-3 py-2 rounded">
+    <button id="toggleBtn" class="fixed top-4 left-4 z-50 bg-[#093a44] text-white px-3 py-2 rounded">
         ☰
     </button>
 
 
     <!-- SIDEBAR -->
-    <div id="sidebar" class="w-64 h-screen bg-gray-900 text-white p-4 fixed transition-all duration-300 overflow-hidden">
+    <div id="sidebar" class="w-64 h-screen bg-[#196D7D] text-white p-4 fixed transition-all duration-300 overflow-hidden">
         
         <div id="sidebarContent" class="mt-16">
             <h1 class="text-xl font-bold ">Admin</h1>

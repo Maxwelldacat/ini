@@ -7,16 +7,20 @@
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen" >
 
-    <nav class="sticky top-0 z-50 bg-gradient-to-r bg-[#0B1320] text-white shadow">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+<nav class="sticky top-0 z-50 bg-gradient-to-r bg-[#196D7D] text-white shadow">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-            <img src="/images/logo1.png" alt="logo" class="w-10 h-15">
-            <div class="flex items-center gap-2">
-                <link rel="icon" type="image/x-icon" href="favicon1.png">
-            </div>
+        <img src="/images/logo1.png" alt="logo" class="w-10 h-15">
+        <div class="flex items-center gap-2">
+            <link rel="icon" type="image/x-icon" href="favicon1.png">
+            <h1 class="font-bold text-xl"> taravisual.id</h1>
+            <p class="text-xs text-gray-200">Documentation</p>
+        </div>
 
         </div>
-    </nav>
+
+    </div>
+</nav>
 
     <div class="relative z-10 px-10 pt-6">
         <a href="/"
@@ -43,13 +47,13 @@
         <div class="grid md:grid-cols-3 gap-6">
 
             <!-- PAKET 1 -->
-            <div class="bg-white rounded-xl shadow p-6   border-t-4 border-[#196D7D]">
+            <div class="bg-white rounded-xl shadow p-6  border-t-4 border-[#196D7D]">
                 <h2 class="text-2xl font-bold mb-4">
                     Basic
                 </h2>
                 <p>/hari</p>
 
-                <p class="text-blue-600 font-semibold text-xl mb-4">
+                <p class="text-[#196D7D] font-semibold text-xl mb-4">
                     Rp 250k
                 </p>
 
@@ -66,7 +70,7 @@
                     Standard
                 </h2>
 
-                <p class="text-blue-600 font-semibold text-xl mb-4">
+                <p class="text-[#196D7D] font-semibold text-xl mb-4">
                     Rp 500k
                 </p>
 
@@ -85,7 +89,7 @@
                     Premium
                 </h2>
 
-                <p class="text-blue-600 font-semibold text-xl mb-4">
+                <p class="text-[#196D7D] font-semibold text-xl mb-4">
                     Rp 650k
                 </p>
 
@@ -104,7 +108,7 @@
         <!-- BUTTON -->
         <div class="text-center mt-12">
             <a href="/pemesanan"
-               class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+               class="bg-[#196D7D] text-white px-6 py-3 rounded-lg hover:bg-[#145663]">
                 Pesan Sekarang
             </a>
         </div>
@@ -122,7 +126,7 @@
 
             <div>
                 <h2 class="font-bold mb-2">Kontak</h2>
-                <p>WhatsApp: 08xxxx</p>
+                <p>WhatsApp: 081333360727/p>
                 <p>Email: bataraagurualamin@gmail.com</p>
             </div>
 

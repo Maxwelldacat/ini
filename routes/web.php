@@ -90,3 +90,5 @@ Route::put('/admin/portofolio/video/{id}', [PortofolioController::class, 'update
 
 Route::put('/admin/portofolio/photo/{id}', [PortofolioController::class, 'updatePhoto']);
 
+Route::post('/upload-bukti/{id}', [OrderController::class, 'uploadBukti'])
+    ->name('upload.bukti');

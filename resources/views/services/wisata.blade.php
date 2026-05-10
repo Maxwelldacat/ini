@@ -7,17 +7,18 @@
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen" >
 
-    <nav class="sticky top-0 z-50 bg-gradient-to-r bg-[#0B1320] text-white shadow">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+<nav class="sticky top-0 z-50 bg-gradient-to-r bg-[#196D7D] text-white shadow">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-            <img src="/images/logo1.png" alt="logo" class="w-10 h-15">
-            <div class="flex items-center gap-2">
-                <link rel="icon" type="image/x-icon" href="favicon1.png">
-                
-            </div>
-
+        <img src="/images/logo1.png" alt="logo" class="w-10 h-15">
+        <div class="flex items-center gap-2">
+            <link rel="icon" type="image/x-icon" href="favicon1.png">
+            <h1 class="font-bold text-xl"> taravisual.id</h1>
+            <p class="text-xs text-gray-200">Documentation</p>
         </div>
-    </nav>
+
+    </div>
+</nav>
     
     <div class="relative z-10 px-10 pt-6">
         <a href="/"
@@ -50,7 +51,7 @@
                     1 Day Trip
                 </h2>
 
-                <p class="text-blue-600 font-semibold text-xl mb-4">
+                <p class="text-[#196D7D] font-semibold text-xl mb-4">
                     Rp 500.000
                 </p>
                 <p class="font-semibold mt-5 mb-3">include</p>
@@ -67,7 +68,7 @@
                     2 Day Trip
                 </h2>
 
-                <p class="text-blue-600 font-semibold text-xl mb-4">
+                <p class="text-[#196D7D] font-semibold text-xl mb-4">
                     Rp 800.000
                 </p>
 
@@ -85,7 +86,7 @@
                     3 Day Trip
                 </h2>
 
-                <p class="text-blue-600 font-semibold text-xl mb-4">
+                <p class="text-[#196D7D] font-semibold text-xl mb-4">
                     Rp 1.300.000
                 </p>
 
@@ -102,7 +103,7 @@
                     Bali Trip
                 </h2>
 
-                <p class="text-blue-600 font-semibold text-xl mb-4">
+                <p class="text-[#196D7D] font-semibold text-xl mb-4">
                     Rp 1.550.000
                 </p>
 
@@ -118,7 +119,7 @@
 
         <!-- BUTTON -->
         <div class="text-center mt-12">
-            <a href="/pemesanan" class="bg-[#196D7D] text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+            <a href="/pemesanan" class="bg-[#196D7D] text-white px-6 py-3 rounded-lg hover:bg-[#145663]">
                 Pesan Sekarang
             </a>
         </div>
@@ -159,7 +160,7 @@ hover:bg-[#57AOB2]
 
             <div>
                 <h2 class="font-bold mb-2">Kontak</h2>
-                <p>WhatsApp: 08xxxx</p>
+                <p>WhatsApp: 081333360727</p>
                 <p>Email: bataraagurualamin@gmail.com</p>
             </div>
 

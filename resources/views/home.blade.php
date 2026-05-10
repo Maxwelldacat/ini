@@ -33,7 +33,7 @@
 
 <section id="tentang" class="py-16 bg-gray-100">
     <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-2xl font-bold mb-4">Tentang Kami</h2>
+        <h2 class="text-2xl font-bold text-[#196D7D] mb-4">Tentang Kami</h2>
         <p class="text-gray-600">
             Kami merupakan salah satu tim videografi & fotografi yang berpengalaman, kami bergerak dalam bidang dokumentasi, 
             seperti dokumentasii wisata, event, wedding. Kami berisikan 3 anggota yang bisa disesuaikan dengan domisili anda, 
@@ -47,36 +47,43 @@
 
 <section id="jasa" class="py-16 bg-gray-200">
     <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-2xl font-bold mb-10 text-center ">Jasa Kami</h2>
+        <h2 class="text-2xl font-bold text-[#196D7D] mb-10 text-center ">Jasa Kami</h2>
         <div class="grid md:grid-cols-2 gap-8 justify-center">
 
-            <a href="/services/event"
-            class="bg-white rounded-xl shadow p-10 text-center block hover:scale-105 duration-300">
+            <div class="bg-white rounded-xl shadow p-10 text-center block hover:scale-105 duration-300 ">
 
-                <h2 class="text-3xl font-bold mb-4">
-                    Event
-                </h2>
+                    <h2 class="text-3xl font-bold text-[#196D7D] mb-4">
+                        Event
+                    </h2>
 
-                <p class="text-gray-600">
-                    Dokumentasi acara formal dan non-formal seperti seminar,
-                    konser, gathering, dan kegiatan lainnya.
-                </p>
+                    <p class="text-gray-600">
+                        Dokumentasi acara formal dan non-formal seperti seminar,
+                        konser, gathering, dan kegiatan lainnya.
+                    </p>
+                    <div style="text-align: right;">
+                        <a href="/services/event" class="inline-block bg-[#196D7D] text-white px-4 py-2 rounded-lg hover:bg-[#145663] ">
+                            lihat detail
+                        </a>
+                    </div>
 
-            </a>
+            </div>
+            <div class="bg-white rounded-xl shadow p-10 text-center block hover:scale-105 duration-300 ">
 
+                    <h2 class="text-3xl font-bold text-[#196D7D] mb-4">
+                        Event
+                    </h2>
 
-            <a href="/services/wisata"
-            class="bg-white rounded-xl shadow p-10 text-center block hover:scale-105 duration-300">
+                    <p class="text-gray-600">
+                        Dokumentasi perjalanan dan trip wisata dengan konsep cinematic untuk mengabadikan momen terbaik.
+                    </p>
+                    <div style="text-align: right;">
+                        <a href="/services/wisata" class="inline-block bg-[#196D7D] text-white px-4 py-2 rounded-lg hover:bg-[#145663] ">
+                            lihat detail
+                        </a>
+                    </div>
 
-                <h2 class="text-3xl font-bold mb-4">
-                    Wisata
-                </h2>
+            </div>
 
-                <p class="text-gray-600">
-                    Dokumentasi perjalanan dan trip wisata dengan konsep cinematic untuk mengabadikan momen terbaik.
-                </p>
-
-            </a>
 
         </div>
     </div>
@@ -86,7 +93,7 @@
 
 <section id="contact" class="py-16 bg-gray-100">
     <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-2xl font-bold mb-4">Kontak</h2>
+        <h2 class="text-2xl font-bold text-[#196D7D] mb-4">Kontak</h2>
         <p class="text-gray-600">Hubungi kami untuk informasi lebih lanjut</p>
 
         <div class="mt-4">

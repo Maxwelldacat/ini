@@ -7,18 +7,18 @@
 <h3 class="text-lg font-bold mb-4">Statistik</h3>
 
     <div class="grid md:grid-cols-3 gap-6 mb-10">
-        <div class="bg-gray-900 text-white p-6 rounded-xl shadow">
-            <p class="text-gray-400">Total Pesanan</p>
+        <div class="bg-[#196D7D] text-white p-6 rounded-xl shadow">
+            <p class="text-white">Total Pesanan</p>
             <h2 class="text-2xl font-bold">{{ $totalOrders ?? 0 }}</h2>
         </div>
 
-        <div class="bg-gray-800 text-white p-6 rounded-xl shadow">
-            <p class="text-gray-400">Total Video</p>
+        <div class="bg-[#2198b6] text-white p-6 rounded-xl shadow">
+            <p class="text-white">Total Video</p>
             <h2 class="text-2xl font-bold">{{ $totalVideos ?? 0 }}</h2>
         </div>
 
-        <div class="bg-gray-700 text-white p-6 rounded-xl shadow">
-            <p class="text-gray-400">Pesanan Hari Ini</p>
+        <div class="bg-[#57A0B2] text-white p-6 rounded-xl shadow">
+            <p class="text-white">Pesanan Hari Ini</p>
             <h2 class="text-2xl font-bold">{{ $todayOrders ?? 0 }}</h2>
         </div>
     </div>

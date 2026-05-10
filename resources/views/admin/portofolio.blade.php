@@ -43,7 +43,7 @@
                 required
             >
 
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+            <button type="submit" class="bg-[#196D7D] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#145663] transition">
                 Update Video
             </button>
 
@@ -91,7 +91,7 @@
                 required
             >
 
-            <button class="bg-green-500 text-white px-4 py-2 rounded">
+            <button class="bg-[#196D7D] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#145663] transition">
                 Update Foto
             </button>
 
