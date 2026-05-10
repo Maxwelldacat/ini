@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\PortofolioController;
 
 
 Route::get('/', function () {
@@ -72,3 +74,19 @@ Route::get('/services/event', function () {
 Route::get('/services/wisata', function () {
     return view('services.wisata');
 });
+
+Route::get('/admin/photos', [PhotoController::class, 'index']);
+
+Route::post('/admin/photos', [PhotoController::class, 'store']);
+
+
+
+
+Route::get('/admin/portofolio', [PortofolioController::class, 'index']);
+Route::post('/admin/portofolio/video/{position}', [PortofolioController::class, 'updateVideo']);
+Route::post('/admin/portofolio/photo/{position}', [PortofolioController::class, 'updatePhoto']);
+
+Route::put('/admin/portofolio/video/{id}', [PortofolioController::class, 'updateVideo']);
+
+Route::put('/admin/portofolio/photo/{id}', [PortofolioController::class, 'updatePhoto']);
+

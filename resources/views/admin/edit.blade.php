@@ -16,7 +16,7 @@
 
 <textarea name="description" class="border p-2 w-full mb-3">{{ $video->description }}</textarea>
 
-<input type="text" name="thumbnail" value="{{ $video->thumbnail }}" class="border p-2 w-full mb-3">
+<input type="text" name="thumbnail" value="{{ $video->file }}" class="border p-2 w-full mb-3">
 
 <input type="text" name="video_url" value="{{ $video->video_url }}" class="border p-2 w-full mb-3">
 

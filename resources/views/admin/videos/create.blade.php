@@ -9,16 +9,20 @@
 
 
 
+<div class="mb-4">
+    <label class="block font-bold mb-2">
+        Slot Video
+    </label>
 
-<form action="/admin/videos" method="POST" class="bg-white p-4 shadow rounded"" method="POST" class="bg-white p-4 shadow rounded">
-@csrf
+    <select name="position" class="w-full border p-2">
+        <option value="1">Video 1</option>
+        <option value="2">Video 2</option>
+        <option value="3">Video 3</option>
+        <option value="4">Video 4</option>
+    </select>
+</div>
 
-<input type="text" name="title" placeholder="Judul" class="border p-2 w-full mb-3">
-<textarea name="description" placeholder="Deskripsi" class="border p-2 w-full mb-3"></textarea>
-<input type="text" name="thumbnail" placeholder="Link Thumbnail" class="border p-2 w-full mb-3">
-<input type="text" name="video_url" placeholder="Link Video (YouTube)" class="border p-2 w-full mb-3">
-<button class="bg-green-500 text-white px-4 py-2 rounded">Simpan</button>
 
-</form>
+
 
 @endsection

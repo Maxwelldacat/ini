@@ -1,78 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="/favicon1.png">
-    <title>Videografi</title>
-    @vite('resources/css/app.css')
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Berhasil</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex flex-col min-h-screen" >
+<body class="bg-[#06152d] min-h-screen flex items-center justify-center p-6">
 
-<nav class="sticky top-0 z-50 bg-gradient-to-r from-gray-900 to-black text-white shadow">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl p-8">
 
-        <img src="/images/logo1.png" alt="logo" class="w-10 h-15">
-        <div class="flex items-center gap-2">
-            <link rel="icon" type="image/x-icon" href="favicon1.png">
-            <h1 class="font-bold text-xl"> taravisual.id</h1>
-            <p class="text-xs text-gray-200">Videography</p>
+        {{-- HEADER --}}
+        <div class="text-center">
+
+            <div class="text-5xl mb-4">
+                🎉
+            </div>
+
+            <h1 class="text-4xl font-bold text-green-600">
+                Pemesanan Berhasil!
+            </h1>
+
+            <p class="text-gray-600 mt-4 text-lg">
+                Terima kasih, pesanan kamu sudah kami terima.
+            </p>
+
         </div>
-    </div>
-</nav>
 
-<div class="max-w-xl mx-auto mt-20 bg-white p-8 rounded shadow text-center">
-    
-    <h1 class="text-2xl font-bold mb-4 text-green-600">
-        🎉 Pemesanan Berhasil!
-    </h1>
+        {{-- TOTAL --}}
+        <div class="bg-blue-50 rounded-2xl p-6 mt-8 text-center border border-blue-100">
 
-    <p class="mb-4">Terima kasih, pesanan kamu sudah kami terima.</p>
+            <p class="text-gray-500 text-lg">
+                Total Pembayaran
+            </p>
 
-    <p class="text-lg font-semibold mb-2">
-        Total Harga:
-    </p>
+            <h2 class="text-5xl font-bold text-blue-600 mt-2">
+                Rp {{ number_format($order->total_harga, 0, ',', '.') }}
+            </h2>
 
-    <p class="text-2xl font-bold text-blue-600 mb-6">
-        Rp {{ number_format($order->total_harga, 0, ',', '.') }}
-    </p>
+        </div>
 
-    <div class="text-left mb-6">
-        <p class="font-semibold mb-2">Silakan transfer ke:</p>
-        <p>gopay 081333360727 a.n Batara Guru Al Amin</p>
-        <p>shoopepay 082140644332 a.n Batara Guru Al Amin</p>
-        <p>dana 081333360727 a.n Batara Guru Al Amin</p>
-        <p>mandiri 1400023920037 a.n Batara Guru Al Amin</p>
-        <p>bca 1931368112 Batara Guru Al Amim</p>
+        {{-- PEMBAYARAN --}}
+        <div class="mt-10">
 
-    </div>
+            <h3 class="text-2xl font-bold text-center mb-6">
+                💳 Metode Pembayaran
+            </h3>
 
+            <div class="grid md:grid-cols-2 gap-4">
 
-    <h3 class="mt-6 font-bold">Upload Bukti Transfer</h3>
+                <div class="bg-gray-100 rounded-xl p-4">
+                    <p class="font-bold text-lg">Gopay</p>
+                    <p class="text-gray-700 mt-1">
+                        081333360727
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        a.n Batara Guru Al Amin
+                    </p>
+                </div>
 
-    <form action="/orders/{{ $order->id }}/upload" 
-      method="POST"
-      enctype="multipart/form-data">
+                <div class="bg-gray-100 rounded-xl p-4">
+                    <p class="font-bold text-lg">ShopeePay</p>
+                    <p class="text-gray-700 mt-1">
+                        082140644332
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        a.n Batara Guru Al Amin
+                    </p>
+                </div>
 
-        @csrf
-        <div class="mt-4">
-            <input type="file" name="bukti" class="mb-3">
+                <div class="bg-gray-100 rounded-xl p-4">
+                    <p class="font-bold text-lg">DANA</p>
+                    <p class="text-gray-700 mt-1">
+                        081333360727
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        a.n Batara Guru Al Amin
+                    </p>
+                </div>
 
-            <div class="flex gap-3 justify-center">
-                <button class="bg-[#196D7D] px-4 py-2 text-white rounded">
-                    Upload Bukti
-                </button>
+                <div class="bg-gray-100 rounded-xl p-4">
+                    <p class="font-bold text-lg">Mandiri</p>
+                    <p class="text-gray-700 mt-1">
+                        1400023920037
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        a.n Batara Guru Al Amin
+                    </p>
+                </div>
 
-                <a href="/" class="bg-blue-500 px-4 py-2 text-white rounded">
-                    Kembali ke Home
-                </a>
+                <div class="bg-gray-100 rounded-xl p-4 md:col-span-2">
+                    <p class="font-bold text-lg">BCA</p>
+                    <p class="text-gray-700 mt-1">
+                        1931368112
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        a.n Batara Guru Al Amin
+                    </p>
+                </div>
 
             </div>
+
         </div>
-    </form>
 
-</div>
+        {{-- UPLOAD --}}
+        <div class="mt-10 bg-gray-50 rounded-2xl p-6 border">
 
+            <h3 class="text-2xl font-bold text-center mb-4">
+                📤 Upload Bukti Transfer
+            </h3>
 
+            <p class="text-center text-gray-500 mb-6">
+                Upload bukti pembayaran dalam format JPG, PNG, atau PDF.
+            </p>
+
+            <form action="/orders/{{ $order->id }}/upload" method="POST" enctype="multipart/form-data">
+
+                @csrf
+
+                <input
+                    type="file"
+                    name="bukti_transfer"
+                    class="w-full border rounded-lg p-3"
+                    required
+                >
+
+                <div class="flex justify-center gap-4 mt-6 flex-wrap">
+
+                    <button
+                        type="submit"
+                        class="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-xl font-semibold transition"
+                    >
+                        Upload Bukti
+                    </button>
+
+                    <a
+                        href="/"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition"
+                    >
+                        Kembali ke Home
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
-

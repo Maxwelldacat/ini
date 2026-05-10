@@ -63,7 +63,7 @@ class OrderController extends Controller
             'no_hp' => $request->no_hp,
             'jenis_jasa' => $request->jenis_jasa,
             'paket' => $request->paket,
-            'tanggal_acara' => $request->tanggal_pemesanan,
+            'tanggal_acara' => $request->tanggal_acara,
             'catatan' => $request->catatan,
 
             'drone' => $request->drone ? 1 : 0,

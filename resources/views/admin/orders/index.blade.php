@@ -1,9 +1,9 @@
 @extends('admin.layouts.app')
 
 @section('title')
-    <div class="grid md:grid-cols-2 gap-6 mb-10">
-        <h2 class="text-xl font-bold bg-gray-800 text-white p-6 rounded-xl ">📦 Kelola Pesanan</h2>
-    </div>
+
+    <h2 class="text-xl font-bold bg-gray-800 text-white p-6 rounded-xl ">📦 Kelola Pesanan</h2>
+
 @endsection
 
 @section('content')
@@ -46,7 +46,7 @@
                     <td class="border px-6 py-5 align-top">{{ $order->catatan }}</td>
                     <td class="border px-6 py-5 align-top">
                         @if($order->bukti_transfer)
-                            <a href="{{ asset('storage/' . $order->bukti_transfer) }}" target="_blank" class="text-blue-500">
+                            <a href="{{ asset('storage/' . $order->bukti_transfer) }}" target="_self" class="text-blue-500">
                                 Lihat
                             </a>
                         @else

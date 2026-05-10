@@ -3,15 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Video;
+use App\Models\Photo;
 use Illuminate\Http\Request;
 use App\Models\Order;
+use Illuminate\Support\Facades\Storage;
 
 class VideoController extends Controller
 {
     public function index()
     {
-        $videos = Video::latest()->get();
-        return view('portofolio.index', compact('videos'));
+        $videos = Video::orderBy('position')->take(4)->get();
+
+        $photos = Photo::orderBy('position')->take(6)->get();
+
+        return view('portofolio.index', compact('videos', 'photos'));
     }
 
     public function adminIndex()
@@ -28,7 +33,33 @@ class VideoController extends Controller
 
     public function store(Request $request)
     {
-        Video::create($request->all());
+        $request->validate([
+            'judul' => 'required',
+            'video' => 'required|mimes:mp4,mov,avi',
+            'position' => 'required'
+        ]);
+
+        // CEK APAKAH SLOT SUDAH ADA VIDEO
+        $oldVideo = Video::where('position', $request->position)->first();
+
+        // KALAU ADA → HAPUS VIDEO LAMA
+        if ($oldVideo) {
+
+            Storage::delete('public/' . $oldVideo->video);
+
+            $oldVideo->delete();
+        }
+
+        // UPLOAD VIDEO BARU
+        $path = $request->file('video')->store('videos', 'public');
+
+        // SIMPAN VIDEO BARU
+        Video::create([
+            'judul' => $request->judul,
+            'video' => $path,
+            'position' => $request->position,
+        ]);
+
         return redirect('/admin/videos');
     }
 
