@@ -62,7 +62,7 @@
 
     <div class="flex justify-center gap-4">
         <a href="/pemesanan"
-           class="bg-[#196D7D] text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-[#145663] transition">
+           class="bg-[#196D7D] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#145663] transition">
             Pesan Jasa
         </a>
 
