@@ -16,10 +16,6 @@ class PortofolioController extends Controller
         return view('admin.portofolio', compact('videos', 'photos'));
     }
 
-
-
-
-
     public function updateVideo(Request $request, $id)
     {
         $request->validate([

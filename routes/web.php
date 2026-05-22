@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::get('/portofolio', [VideoController::class, 'index']);
 
 // ADMIN
-Route::prefix('admin')->group(function () {
+/*Route::prefix('admin')->group(function () {
     Route::get('/videos', [VideoController::class, 'adminIndex']);
     Route::get('/videos/create', [VideoController::class, 'create']);
     Route::post('/videos', [VideoController::class, 'store']);
@@ -31,7 +31,7 @@ Route::prefix('admin')->group(function () {
     Route::put('/orders/{id}', [OrderController::class, 'update']);
     Route::delete('/orders/{id}', [OrderController::class, 'destroy']);
 });
-
+*/
 
 // USER - FORM PEMESANAN
 Route::get('/pemesanan', [OrderController::class, 'create']);
@@ -75,10 +75,10 @@ Route::get('/services/wisata', function () {
     return view('services.wisata');
 });
 
+/*
 Route::get('/admin/photos', [PhotoController::class, 'index']);
-
 Route::post('/admin/photos', [PhotoController::class, 'store']);
-
+*/
 
 
 
